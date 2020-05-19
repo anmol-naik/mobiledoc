@@ -1,9 +1,5 @@
 pipeline {
-    agent { docker {
-            image 'python:3.5.1'
-            args '-u root:root --privileged -v /var/run/docker.sock:/var/run/docker.sock'
-            }
-          }
+    agent { docker { image 'python:3.5.1' } }
     stages {
         stage('build') {
             steps {
